@@ -28,7 +28,7 @@
 @property (nonatomic,assign) CGPoint playerY;
 @property (nonatomic,assign) float y;
 @property (nonatomic,assign) float t;
--(void) jumpTest;
+
 -(void) attack;
 +(NSString *) whoIsLevel_0;
 

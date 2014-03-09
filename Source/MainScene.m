@@ -8,6 +8,7 @@
 
 #import "MainScene.h"
 
+
 @implementation MainScene
 {
     int i;
@@ -15,29 +16,43 @@
 }
 -(void) didLoadFromCCB
 {
-    i = 1;
+    
+    LoadIntoLayer * intoLayer = (LoadIntoLayer *) [CCBReader load:@"LoadIntoLayer"];
+    intoLayer.delegate = self;
+    _scrollView.contentNode = intoLayer;
+    _returnButton.visible = NO;
+    _bananaButton.visible = NO;
+    _setting.visible = NO;
+    self.currentLevel = [CCBReader load:@"LoadIntoLayer"];
+
 }
+
+-(void) loadInto
+{
+
+    
+    MenuLayer *menuLayer = (MenuLayer *) [CCBReader load:@"MenuLayer"];
+    menuLayer.delegate = self;
+    _scrollView.contentNode = menuLayer;
+    _returnButton.visible = NO;
+    _bananaButton.visible = NO;
+        _setting.visible = YES;
+    self.currentLevel = [CCBReader load:@"MenuLayer"];
+}
+
+
 -(void) isGameReset:(id) sender
 {
-    i +=1;
-    i = i%2;
-   
-    if(i==1){
-        _scrollView.contentNode = [CCBReader load:@"Level"];
-    }
-
-    if (i==0){
-        _scrollView.contentNode = [CCBReader load:@"Level_0"];
-    }
-
-    self.currentLevel = _scrollView.contentNode;
-    
+    MenuLayer *menuLayer = (MenuLayer *) [CCBReader load:@"MenuLayer"];
+    menuLayer.delegate = self;
+    _scrollView.contentNode = menuLayer;
+    _returnButton.visible = NO;
+    _bananaButton.visible =NO;
+        _setting.visible = YES;
+    self.currentLevel = [CCBReader load:@"MenuLayer"];
 }
 
--(void)isShot:(id)sender
-{
 
-}
 
 -(void) buttonPressed:(id) sender{
     if ([self.currentLevel isKindOfClass:[Level_0 class]]){
@@ -82,5 +97,35 @@
     
     
 }
+-(void) selectGameOne
+{
+    Level *level = (Level *) [CCBReader load:@"Level"];
+    _scrollView.contentNode = level;
+    CCLOG(@"LOADing");
+    _returnButton.visible = YES;
+    _bananaButton.visible = YES;
+        _setting.visible = YES;
+    self.currentLevel = level;
+
+
+}
+-(void) selectGameTwo
+{
+    Level_0 *level = (Level_0 *) [CCBReader load:@"Level_0"];
+    _scrollView.contentNode = level;
+    CCLOG(@"LOADing");    
+    _returnButton.visible = YES;
+    _bananaButton.visible = YES;
+    _setting.visible = YES;
+    self.currentLevel = level;
+}
+
+
+-(void) isSetting :(id)sender
+{
+    CCLOG(@"setting 施工中");
+}
+
+
 
 @end

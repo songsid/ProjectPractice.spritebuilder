@@ -19,7 +19,7 @@
 
 }
 
-
+@property (nonatomic, strong) CCNode *_player;
 -(void) attack;
 
 

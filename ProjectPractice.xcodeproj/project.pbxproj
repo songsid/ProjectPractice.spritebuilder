@@ -10,6 +10,8 @@
 		1F2B38A818B4A66B004E2F76 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2B38A718B4A66B004E2F76 /* Level.m */; };
 		1F42F9B818B8F8AC002509E7 /* Level_0.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F42F9B718B8F8AC002509E7 /* Level_0.m */; };
 		1F68876418C6B38E00C7CDAD /* LevelObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F68876318C6B38E00C7CDAD /* LevelObject.m */; };
+		1FA50B3B18C8B05400839FD9 /* MenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA50B3A18C8B05400839FD9 /* MenuLayer.m */; };
+		1FF1D57718CC0E99001B0DFA /* LoadIntoLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF1D57618CC0E99001B0DFA /* LoadIntoLayer.m */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
 		B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
 		B71F5913188484E7003F4D28 /* iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5909188484E7003F4D28 /* iPad.png */; };
@@ -48,13 +50,6 @@
 			remoteGlobalIDString = 5018F24D0DFDEAC400C013A5;
 			remoteInfo = cocos2d;
 		};
-		B7378988180764180076A88C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B7378940180761A80076A88C /* cocos2d-ios.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 5018F24C0DFDEAC400C013A5;
-			remoteInfo = cocos2d;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +59,10 @@
 		1F42F9B718B8F8AC002509E7 /* Level_0.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Level_0.m; path = Source/Level_0.m; sourceTree = "<group>"; };
 		1F68876218C6B38E00C7CDAD /* LevelObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LevelObject.h; path = Source/LevelObject.h; sourceTree = "<group>"; };
 		1F68876318C6B38E00C7CDAD /* LevelObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LevelObject.m; path = Source/LevelObject.m; sourceTree = "<group>"; };
+		1FA50B3918C8B05400839FD9 /* MenuLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuLayer.h; path = Source/MenuLayer.h; sourceTree = "<group>"; };
+		1FA50B3A18C8B05400839FD9 /* MenuLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuLayer.m; path = Source/MenuLayer.m; sourceTree = "<group>"; };
+		1FF1D57518CC0E99001B0DFA /* LoadIntoLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadIntoLayer.h; path = Source/LoadIntoLayer.h; sourceTree = "<group>"; };
+		1FF1D57618CC0E99001B0DFA /* LoadIntoLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoadIntoLayer.m; path = Source/LoadIntoLayer.m; sourceTree = "<group>"; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
 		B71F5909188484E7003F4D28 /* iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPad.png; path = Icons/iPad.png; sourceTree = "<group>"; };
@@ -135,6 +134,10 @@
 				B737893E1807617C0076A88C /* AppDelegate.m */,
 				B7378992180767190076A88C /* MainScene.h */,
 				B7378993180767190076A88C /* MainScene.m */,
+				1FF1D57518CC0E99001B0DFA /* LoadIntoLayer.h */,
+				1FF1D57618CC0E99001B0DFA /* LoadIntoLayer.m */,
+				1FA50B3918C8B05400839FD9 /* MenuLayer.h */,
+				1FA50B3A18C8B05400839FD9 /* MenuLayer.m */,
 				1F68876218C6B38E00C7CDAD /* LevelObject.h */,
 				1F68876318C6B38E00C7CDAD /* LevelObject.m */,
 				1F2B38A618B4A66B004E2F76 /* Level.h */,
@@ -244,7 +247,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				B7378989180764180076A88C /* PBXTargetDependency */,
 			);
 			name = ProjectPractice;
 			productName = Example;
@@ -276,6 +278,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				English,
 			);
 			mainGroup = B77F1B2517B978D7009739AE;
 			productRefGroup = B77F1B2F17B978D7009739AE /* Products */;
@@ -334,23 +337,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F42F9B818B8F8AC002509E7 /* Level_0.m in Sources */,
+				1FF1D57718CC0E99001B0DFA /* LoadIntoLayer.m in Sources */,
 				1F68876418C6B38E00C7CDAD /* LevelObject.m in Sources */,
 				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
 				B7378994180767190076A88C /* MainScene.m in Sources */,
+				1FA50B3B18C8B05400839FD9 /* MenuLayer.m in Sources */,
 				1F2B38A818B4A66B004E2F76 /* Level.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B7378989180764180076A88C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = cocos2d;
-			targetProxy = B7378988180764180076A88C /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		B77F1CDC17B978D8009739AE /* Debug */ = {
@@ -415,6 +412,22 @@
 				);
 				INFOPLIST_FILE = Source/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/Sid/Desktop/XCODE/CC2DBASIC/CocosPratice/ProjectPractice.spritebuilder/Source/libs/cocos2d-iphone/build/Debug",
+					"/Users/Sid/Desktop/XCODE/CC2DBASIC/CocosPratice/ProjectPractice.spritebuilder/Source/libs/cocos2d-iphone/build/Release",
+					"/Users/Sid/Desktop/XCODE/CC2DBASIC/CocosPratice/ProjectPractice.spritebuilder/Source/libs/cocos2d-iphone/external/Chipmunk/msvc/glew/lib/Release/Win32",
+					"/Users/Sid/Desktop/XCODE/CC2DBASIC/CocosPratice/ProjectPractice.spritebuilder/Source/libs/cocos2d-iphone/external/Chipmunk/msvc/glfw/lib-msvc100",
+					"/Users/Sid/Desktop/XCODE/CC2DBASIC/CocosPratice/ProjectPractice.spritebuilder/Source/libs/cocos2d-iphone/external/Chipmunk/xcode/build/Chipmunk7.build/Release-iphoneos/ChipmunkStatic-iPhone.build/Objects-normal/armv7",
+					"/Users/Sid/Desktop/XCODE/CC2DBASIC/CocosPratice/ProjectPractice.spritebuilder/Source/libs/cocos2d-iphone/external/Chipmunk/xcode/build/Chipmunk7.build/Release-iphoneos/ChipmunkStatic-iPhone.build/Objects-normal/armv7s",
+					"/Users/Sid/Desktop/XCODE/CC2DBASIC/CocosPratice/ProjectPractice.spritebuilder/Source/libs/cocos2d-iphone/external/Chipmunk/xcode/build/Chipmunk7.build/Release-iphoneos/ObjectiveChipmunk.build/Objects-normal/armv7",
+					"/Users/Sid/Desktop/XCODE/CC2DBASIC/CocosPratice/ProjectPractice.spritebuilder/Source/libs/cocos2d-iphone/external/Chipmunk/xcode/build/Chipmunk7.build/Release-iphoneos/ObjectiveChipmunk.build/Objects-normal/armv7s",
+					"/Users/Sid/Desktop/XCODE/CC2DBASIC/CocosPratice/ProjectPractice.spritebuilder/Source/libs/cocos2d-iphone/external/Chipmunk/xcode/build/Debug-iphoneos",
+					"/Users/Sid/Desktop/XCODE/CC2DBASIC/CocosPratice/ProjectPractice.spritebuilder/Source/libs/cocos2d-iphone/external/Chipmunk/xcode/build/Release",
+					"/Users/Sid/Desktop/XCODE/CC2DBASIC/CocosPratice/ProjectPractice.spritebuilder/Source/libs/cocos2d-iphone/external/Chipmunk/xcode/build/Release-iphoneos",
+					"/Users/Sid/Desktop/XCODE/CC2DBASIC/CocosPratice/ProjectPractice.spritebuilder/Source/libs/cocos2d-iphone/external/Chipmunk/xcode/libGLEW/lib",
+					"/Users/Sid/Desktop/XCODE/CC2DBASIC/CocosPratice/ProjectPractice.spritebuilder/Source/libs/cocos2d-iphone/external/Chipmunk/xcode/libglfw/lib",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-lz",
@@ -448,6 +461,22 @@
 				);
 				INFOPLIST_FILE = Source/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/Sid/Desktop/XCODE/CC2DBASIC/CocosPratice/ProjectPractice.spritebuilder/Source/libs/cocos2d-iphone/build/Debug",
+					"/Users/Sid/Desktop/XCODE/CC2DBASIC/CocosPratice/ProjectPractice.spritebuilder/Source/libs/cocos2d-iphone/build/Release",
+					"/Users/Sid/Desktop/XCODE/CC2DBASIC/CocosPratice/ProjectPractice.spritebuilder/Source/libs/cocos2d-iphone/external/Chipmunk/msvc/glew/lib/Release/Win32",
+					"/Users/Sid/Desktop/XCODE/CC2DBASIC/CocosPratice/ProjectPractice.spritebuilder/Source/libs/cocos2d-iphone/external/Chipmunk/msvc/glfw/lib-msvc100",
+					"/Users/Sid/Desktop/XCODE/CC2DBASIC/CocosPratice/ProjectPractice.spritebuilder/Source/libs/cocos2d-iphone/external/Chipmunk/xcode/build/Chipmunk7.build/Release-iphoneos/ChipmunkStatic-iPhone.build/Objects-normal/armv7",
+					"/Users/Sid/Desktop/XCODE/CC2DBASIC/CocosPratice/ProjectPractice.spritebuilder/Source/libs/cocos2d-iphone/external/Chipmunk/xcode/build/Chipmunk7.build/Release-iphoneos/ChipmunkStatic-iPhone.build/Objects-normal/armv7s",
+					"/Users/Sid/Desktop/XCODE/CC2DBASIC/CocosPratice/ProjectPractice.spritebuilder/Source/libs/cocos2d-iphone/external/Chipmunk/xcode/build/Chipmunk7.build/Release-iphoneos/ObjectiveChipmunk.build/Objects-normal/armv7",
+					"/Users/Sid/Desktop/XCODE/CC2DBASIC/CocosPratice/ProjectPractice.spritebuilder/Source/libs/cocos2d-iphone/external/Chipmunk/xcode/build/Chipmunk7.build/Release-iphoneos/ObjectiveChipmunk.build/Objects-normal/armv7s",
+					"/Users/Sid/Desktop/XCODE/CC2DBASIC/CocosPratice/ProjectPractice.spritebuilder/Source/libs/cocos2d-iphone/external/Chipmunk/xcode/build/Debug-iphoneos",
+					"/Users/Sid/Desktop/XCODE/CC2DBASIC/CocosPratice/ProjectPractice.spritebuilder/Source/libs/cocos2d-iphone/external/Chipmunk/xcode/build/Release",
+					"/Users/Sid/Desktop/XCODE/CC2DBASIC/CocosPratice/ProjectPractice.spritebuilder/Source/libs/cocos2d-iphone/external/Chipmunk/xcode/build/Release-iphoneos",
+					"/Users/Sid/Desktop/XCODE/CC2DBASIC/CocosPratice/ProjectPractice.spritebuilder/Source/libs/cocos2d-iphone/external/Chipmunk/xcode/libGLEW/lib",
+					"/Users/Sid/Desktop/XCODE/CC2DBASIC/CocosPratice/ProjectPractice.spritebuilder/Source/libs/cocos2d-iphone/external/Chipmunk/xcode/libglfw/lib",
+				);
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-lsqlite3",

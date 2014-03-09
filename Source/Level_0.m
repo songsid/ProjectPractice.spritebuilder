@@ -80,9 +80,6 @@
 }
 
 
--(void) jumpTest{
-    [_player.physicsBody applyImpulse:ccp(0, 1500.f)];
-}
 
 +(NSString *) whoIsLevel_0{
     return @"Levle_0....";

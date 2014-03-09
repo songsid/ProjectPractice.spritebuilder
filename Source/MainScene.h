@@ -9,14 +9,25 @@
 #import "CCNode.h"
 #import "Level.h"
 #import "Level_0.h"
+#import "MenuLayer.h"
+#import "LoadIntoLayer.h"
 
-@interface MainScene : CCNode
+
+@interface MainScene : CCNode <MenuLayerDelegate,LoadIntoLayerDelegate>
 {
     CCScrollView * _scrollView;
     NSArray * levels;
+    CCNode * _returnButton;
+    CCNode * _bananaButton;
+    CCNode * _setting;
 
 }
--(void)isShot :(id)sender;
+
 @property (nonatomic, strong) CCNode *currentLevel;
+
+
+-(void) selectGameOne;
+-(void) selectGameTwo;
+-(void) loadInto;
 
 @end

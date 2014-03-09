@@ -9,10 +9,9 @@
 #import "Level.h"
 #define ARC4RANDOM_MAX      0x100000000
 
+
 @implementation Level
-{
-    //NSArray *_ac;
-}
+@synthesize _player;
 
 -(void)didLoadFromCCB {
     self.userInteractionEnabled = TRUE;
