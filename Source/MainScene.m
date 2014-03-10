@@ -16,7 +16,8 @@
 }
 -(void) didLoadFromCCB
 {
-    
+    _scrollViewSpriteSelect.visible = NO;
+   CCLOG(@"_scrollview.zorder =  %ld",(long)_scrollViewSpriteSelect.zOrder);
     LoadIntoLayer * intoLayer = (LoadIntoLayer *) [CCBReader load:@"LoadIntoLayer"];
     intoLayer.delegate = self;
     _scrollView.contentNode = intoLayer;
@@ -24,6 +25,7 @@
     _bananaButton.visible = NO;
     _setting.visible = NO;
     self.currentLevel = [CCBReader load:@"LoadIntoLayer"];
+    
 
 }
 
@@ -50,6 +52,7 @@
     _bananaButton.visible =NO;
         _setting.visible = YES;
     self.currentLevel = [CCBReader load:@"MenuLayer"];
+    _scrollViewSpriteSelect.visible = NO;
 }
 
 
@@ -126,6 +129,32 @@
     CCLOG(@"setting 施工中");
 }
 
+-(void) isPlayerInfo
+{
+    IsPlayerInfo * playerInfo = (IsPlayerInfo *) [CCBReader load:@"IsPlayerInfo"];
+    _scrollViewSpriteSelect.visible = YES;
+    _scrollView.contentNode = playerInfo;
+    _returnButton.visible = YES;
+    _bananaButton.visible = NO;
+    _setting.visible = NO;
+    self.currentLevel = playerInfo;
+    
+    
+}
+-(void) isMission
+{
+}
+
+-(void) BackToMenu
+{
+    CCLOG(@"BackToMenu");
+    MenuLayer * menu = (MenuLayer *) [CCBReader load:@"MenuLayer"];
+    _scrollView.contentNode = menu;
+    _returnButton.visible = NO;
+    _bananaButton.visible = NO;
+    _setting.visible = NO;
+    self.currentLevel = menu;
+}
 
 
 @end

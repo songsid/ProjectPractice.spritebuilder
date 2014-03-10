@@ -22,7 +22,7 @@
 
 -(void) didLoadCCB
 {
-
+    self.userInteractionEnabled = TRUE;
 }
 
 -(void) isSelectGameOne: (id)sender
@@ -38,5 +38,12 @@
     CCLOG(@"gameTWO!");    
 }
 
-
+-(void) isPlayerInfo:(id) sender
+{
+    [self.delegate isPlayerInfo];
+}
+-(void) isMission :(id)sender
+{
+    [self.delegate isMission];
+}
 @end

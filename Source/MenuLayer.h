@@ -9,6 +9,8 @@
 @protocol MenuLayerDelegate <NSObject>
 -(void) selectGameOne;
 -(void) selectGameTwo;
+-(void) isPlayerInfo;
+-(void) isMission;
 @end
 
 #import "CCNode.h"

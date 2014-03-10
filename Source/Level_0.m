@@ -13,7 +13,7 @@
 
 -(void)didLoadFromCCB {
     self.userInteractionEnabled = TRUE;
-    
+
     // _ac = @[_ground,_player];
     
 }

@@ -11,11 +11,12 @@
 #import "Level_0.h"
 #import "MenuLayer.h"
 #import "LoadIntoLayer.h"
+#import "IsPlayerInfo.h"
 
-
-@interface MainScene : CCNode <MenuLayerDelegate,LoadIntoLayerDelegate>
+@interface MainScene : CCNode <PlayerInfoDelegate,MenuLayerDelegate,LoadIntoLayerDelegate>
 {
     CCScrollView * _scrollView;
+    CCScrollView * _scrollViewSpriteSelect;
     NSArray * levels;
     CCNode * _returnButton;
     CCNode * _bananaButton;
@@ -29,5 +30,8 @@
 -(void) selectGameOne;
 -(void) selectGameTwo;
 -(void) loadInto;
+-(void) isPlayerInfo;
+-(void) isMission;
+-(void) BackToMenu;
 
 @end
