@@ -7,7 +7,7 @@
 //
 @protocol LevelDelegate <NSObject>
 
--(void) BackToMainSceneMenu;
+-(void) backToMainSceneMenu;
 
 @end
 

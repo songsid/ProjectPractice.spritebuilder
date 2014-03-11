@@ -11,13 +11,9 @@
 @implementation LevelScene
 -(void) isMainScene :(id)sender
 {
-
-    
-    CCScene *myscene = [CCBReader loadAsScene:@"MainScene"];
-    [[CCDirector sharedDirector] replaceScene:myscene];
-  //  [self.delegate BackToMainSceneMenu];
-
+    [[CCDirector sharedDirector]popScene];
 
     CCLOG(@"MainScene");
 }
+
 @end

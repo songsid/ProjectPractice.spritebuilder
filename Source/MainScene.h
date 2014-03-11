@@ -13,6 +13,7 @@
 #import "LoadIntoLayer.h"
 #import "IsPlayerInfo.h"
 #import "LevelScene.h"
+
 @interface MainScene : CCNode <PlayerInfoDelegate,MenuLayerDelegate,LoadIntoLayerDelegate,LevelDelegate>
 {
     CCScrollView * _scrollView;
@@ -34,6 +35,6 @@
 -(void) isMission;
 -(void) BackToMenu;
 -(void) LevelScene;
--(void) BackToMainSceneMenu;
+-(void) backToMainSceneMenu;
 
 @end

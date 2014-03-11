@@ -14,6 +14,10 @@
     int i;
     NSString * string;
 }
+
+
+
+
 -(void) didLoadFromCCB
 {
     CCLOG(@"comeFromlevel = %hhd",comeFromLevel);
@@ -30,7 +34,7 @@
     self.currentLevel = [CCBReader load:@"LoadIntoLayer"];
     }else{
     
-        [self BackToMainSceneMenu];
+        //[self backToMainSceneMenu];
     }
 
 }
@@ -132,6 +136,7 @@
 
 -(void) isSetting :(id)sender
 {
+    self.paused = !self.paused;
     CCLOG(@"setting 施工中");
 }
 
@@ -145,7 +150,7 @@
     _setting.visible = NO;
     self.currentLevel = playerInfo;
     
-    
+
 }
 -(void) isMission
 {
@@ -164,20 +169,17 @@
 
 -(void) LevelScene
 {
-    CCScene *myscene = [CCBReader loadAsScene:@"LevelScene"];
-    [[CCDirector sharedDirector] replaceScene:myscene];
-    CCLOG(@"levelscene");
+    CCScene * scene = [CCBReader loadAsScene:@"LevelScene"];
+    CCTransition * transitionPush = [CCTransition transitionPushWithDirection:3 duration:0.3f];
+   [[CCDirector sharedDirector]pushScene:scene withTransition:transitionPush];
+    
 }
--(void) BackToMainSceneMenu
+
+
+-(void) backToMainSceneMenu
 {
-    MenuLayer *menuLayer = (MenuLayer *) [CCBReader load:@"MenuLayer"];
-    menuLayer.delegate = self;
-    _scrollView.contentNode = menuLayer;
-    _returnButton.visible = NO;
-    _bananaButton.visible =NO;
-    _setting.visible = YES;
-    self.currentLevel = [CCBReader load:@"MenuLayer"];
-    _scrollViewSpriteSelect.visible = NO;
+    
+    CCLOG(@"backtoMainScene");
     
 }
 @end
