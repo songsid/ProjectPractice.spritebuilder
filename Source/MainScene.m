@@ -16,6 +16,9 @@
 }
 -(void) didLoadFromCCB
 {
+    CCLOG(@"comeFromlevel = %hhd",comeFromLevel);
+    if (!comeFromLevel) {
+    
     _scrollViewSpriteSelect.visible = NO;
    CCLOG(@"_scrollview.zorder =  %ld",(long)_scrollViewSpriteSelect.zOrder);
     LoadIntoLayer * intoLayer = (LoadIntoLayer *) [CCBReader load:@"LoadIntoLayer"];
@@ -25,7 +28,10 @@
     _bananaButton.visible = NO;
     _setting.visible = NO;
     self.currentLevel = [CCBReader load:@"LoadIntoLayer"];
+    }else{
     
+        [self BackToMainSceneMenu];
+    }
 
 }
 
@@ -50,7 +56,7 @@
     _scrollView.contentNode = menuLayer;
     _returnButton.visible = NO;
     _bananaButton.visible =NO;
-        _setting.visible = YES;
+    _setting.visible = YES;
     self.currentLevel = [CCBReader load:@"MenuLayer"];
     _scrollViewSpriteSelect.visible = NO;
 }
@@ -156,5 +162,22 @@
     self.currentLevel = menu;
 }
 
-
+-(void) LevelScene
+{
+    CCScene *myscene = [CCBReader loadAsScene:@"LevelScene"];
+    [[CCDirector sharedDirector] replaceScene:myscene];
+    CCLOG(@"levelscene");
+}
+-(void) BackToMainSceneMenu
+{
+    MenuLayer *menuLayer = (MenuLayer *) [CCBReader load:@"MenuLayer"];
+    menuLayer.delegate = self;
+    _scrollView.contentNode = menuLayer;
+    _returnButton.visible = NO;
+    _bananaButton.visible =NO;
+    _setting.visible = YES;
+    self.currentLevel = [CCBReader load:@"MenuLayer"];
+    _scrollViewSpriteSelect.visible = NO;
+    
+}
 @end

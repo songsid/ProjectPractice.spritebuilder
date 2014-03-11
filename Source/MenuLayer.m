@@ -46,4 +46,9 @@
 {
     [self.delegate isMission];
 }
+
+-(void) isLevelScene :(id) sender
+{
+    [self.delegate LevelScene];
+}
 @end

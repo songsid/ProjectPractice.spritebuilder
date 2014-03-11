@@ -12,8 +12,8 @@
 #import "MenuLayer.h"
 #import "LoadIntoLayer.h"
 #import "IsPlayerInfo.h"
-
-@interface MainScene : CCNode <PlayerInfoDelegate,MenuLayerDelegate,LoadIntoLayerDelegate>
+#import "LevelScene.h"
+@interface MainScene : CCNode <PlayerInfoDelegate,MenuLayerDelegate,LoadIntoLayerDelegate,LevelDelegate>
 {
     CCScrollView * _scrollView;
     CCScrollView * _scrollViewSpriteSelect;
@@ -21,7 +21,7 @@
     CCNode * _returnButton;
     CCNode * _bananaButton;
     CCNode * _setting;
-
+    BOOL comeFromLevel;
 }
 
 @property (nonatomic, strong) CCNode *currentLevel;
@@ -33,5 +33,7 @@
 -(void) isPlayerInfo;
 -(void) isMission;
 -(void) BackToMenu;
+-(void) LevelScene;
+-(void) BackToMainSceneMenu;
 
 @end

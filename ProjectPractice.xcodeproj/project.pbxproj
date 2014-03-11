@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1F2B38A818B4A66B004E2F76 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2B38A718B4A66B004E2F76 /* Level.m */; };
+		1F40528F18CEDDB10062036C /* LevelScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F40528E18CEDDB10062036C /* LevelScene.m */; };
 		1F42F9B818B8F8AC002509E7 /* Level_0.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F42F9B718B8F8AC002509E7 /* Level_0.m */; };
 		1F68876418C6B38E00C7CDAD /* LevelObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F68876318C6B38E00C7CDAD /* LevelObject.m */; };
 		1FA50B3B18C8B05400839FD9 /* MenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA50B3A18C8B05400839FD9 /* MenuLayer.m */; };
@@ -57,6 +58,8 @@
 /* Begin PBXFileReference section */
 		1F2B38A618B4A66B004E2F76 /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Level.h; path = Source/Level.h; sourceTree = "<group>"; };
 		1F2B38A718B4A66B004E2F76 /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Level.m; path = Source/Level.m; sourceTree = "<group>"; };
+		1F40528D18CEDDB10062036C /* LevelScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LevelScene.h; path = Source/LevelScene.h; sourceTree = "<group>"; };
+		1F40528E18CEDDB10062036C /* LevelScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LevelScene.m; path = Source/LevelScene.m; sourceTree = "<group>"; };
 		1F42F9B618B8F8AC002509E7 /* Level_0.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Level_0.h; path = Source/Level_0.h; sourceTree = "<group>"; };
 		1F42F9B718B8F8AC002509E7 /* Level_0.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Level_0.m; path = Source/Level_0.m; sourceTree = "<group>"; };
 		1F68876218C6B38E00C7CDAD /* LevelObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LevelObject.h; path = Source/LevelObject.h; sourceTree = "<group>"; };
@@ -168,6 +171,8 @@
 				B737893E1807617C0076A88C /* AppDelegate.m */,
 				B7378992180767190076A88C /* MainScene.h */,
 				B7378993180767190076A88C /* MainScene.m */,
+				1F40528D18CEDDB10062036C /* LevelScene.h */,
+				1F40528E18CEDDB10062036C /* LevelScene.m */,
 				1FF1D57E18CC2DC5001B0DFA /* LayerObjecct */,
 				1FF1D57D18CC2DAF001B0DFA /* LevelObject */,
 			);
@@ -362,6 +367,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F40528F18CEDDB10062036C /* LevelScene.m in Sources */,
 				1FF1D57C18CC27C7001B0DFA /* IsPlayerInfo.m in Sources */,
 				1F42F9B818B8F8AC002509E7 /* Level_0.m in Sources */,
 				1FF1D58F18CDF6EF001B0DFA /* SpriteSelect.m in Sources */,

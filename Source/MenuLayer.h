@@ -11,6 +11,7 @@
 -(void) selectGameTwo;
 -(void) isPlayerInfo;
 -(void) isMission;
+-(void) LevelScene;
 @end
 
 #import "CCNode.h"
